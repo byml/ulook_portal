@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>优看</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  	<div class="wrapper clearfix">
+  		<div class="login">
+        <li><%= link_to 'weibo', '/auth/weibo' %></li>
+        <li><%= link_to 'qq_connect', '/auth/qq_connect' %></li>
+  		</div>
+  	</div>
+  	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+  </body>
+</html>
